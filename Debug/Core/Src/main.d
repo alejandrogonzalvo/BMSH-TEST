@@ -61,10 +61,6 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/SPI/SPI.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Models/Packets/RawPacket.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/UART/UART.hpp \
- C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/UDP/DatagramSocket.hpp \
- C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/TCP/ServerSocket.hpp \
- C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/TCP/Socket.hpp \
- C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/Ethernet.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/ST-LIB_LOW.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Clocks/Counter.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Clocks/Stopwatch.hpp \
@@ -74,7 +70,11 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Actuator/HalfBridge/HalfBridge.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/ST-LIB_HIGH.hpp \
  C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/Protections/Protection.hpp \
- C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/Protections/ProtectionManager.hpp
+ C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/Protections/ProtectionManager.hpp \
+ C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/BMSH/BMSH.hpp \
+ C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/LTC6811/LTC6811.hpp \
+ C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/Battery/Battery.hpp \
+ C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/PEC15/PEC15.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -138,10 +138,6 @@ C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/EXTI/EXTI.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/SPI/SPI.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Models/Packets/RawPacket.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/UART/UART.hpp:
-C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/UDP/DatagramSocket.hpp:
-C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/TCP/ServerSocket.hpp:
-C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/TCP/Socket.hpp:
-C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/HALAL/Services/Communication/Ethernet/Ethernet.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/ST-LIB_LOW.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Clocks/Counter.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Clocks/Stopwatch.hpp:
@@ -152,3 +148,7 @@ C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_LOW/Actuator/HalfBridge/Half
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/ST-LIB_HIGH.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/Protections/Protection.hpp:
 C:/Users/aleja/Proyectos/Hyper-H8/ST-LIB/Inc/ST-LIB_HIGH/Protections/ProtectionManager.hpp:
+C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/BMSH/BMSH.hpp:
+C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/LTC6811/LTC6811.hpp:
+C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/Battery/Battery.hpp:
+C:/Users/aleja/Proyectos/Hyper-H8/BMS/BMS-LIB/Inc/Models/PEC15/PEC15.hpp:
