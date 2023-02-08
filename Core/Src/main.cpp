@@ -8,14 +8,17 @@
 #include "Examples/examples.hpp"
 
 int main(void) {
-	STLIB::start(Nucleo);
 
 	BMSH bmsh = BMSH(SPI::spi3);
+	STLIB::start(Nucleo);
+
 	bmsh.wake_up();
 
 	Time::register_high_precision_alarm(100, [&](){
 		bmsh.send_command(BMS::COMMAND::READ_CONFIGURATION_REGISTER_GROUP);
 	});
+
+	while(1){};
 }
 
 void Error_Handler(void) {
