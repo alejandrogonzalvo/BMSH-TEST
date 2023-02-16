@@ -14,9 +14,7 @@ int main(void) {
 
 	bmsh.wake_up();
 
-	Time::register_high_precision_alarm(100, [&](){
-		bmsh.send_command(BMS::COMMAND::READ_CONFIGURATION_REGISTER_GROUP);
-	});
+	update_configuration(bmsh);
 
 	while(1){};
 }

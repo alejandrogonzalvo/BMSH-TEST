@@ -2,7 +2,7 @@
 #include "../Runes/Runes.hpp"
 #include "BMSH/BMSH.hpp"
 
-void update_configuration(BMSH& bmsh) {
+void balanced_charging(BMSH& bmsh) {
 
 	  LTC6811::configuration& adc_config = bmsh.external_adcs[0].peripheral_configuration;
 	  adc_config.set_references(true);

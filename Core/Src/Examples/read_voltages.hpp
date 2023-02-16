@@ -10,32 +10,33 @@ void read_voltages(BMSH& bmsh) {
 		adc_config.set_cell_discharging(i, false);
 	}
 
-	bmsh.update_configuration();
-	HAL_Delay(5);
+
 	bmsh.start_adc_conversion_all_cells();
 	HAL_Delay(5);
 
 
-	printf("\n\n\n\n\n\n\n\n\n");
-	Time::register_high_precision_alarm(10000, [&](){
-	  bmsh.wake_up();
-	  bmsh.read_cell_voltages();
-	});
-
-	Time::register_high_precision_alarm(2000000, [&](){
-	  printf("\n\n\n\r");
-	  for (uint8_t i : iota(0, Battery::CELLS)) {
-
-		  printf("bat 1 | cell %d = %fV\t\t\tbat2 | cell %d = %f\n\r", i, bmsh.get_cell(i), i, bmsh.get_cell(i+Battery::CELLS));
-
-	  }
-	  for (uint8_t i : iota(0, Battery::CELLS)) {
-
-		  printf("bat 3 | cell %d = %fV\t\t\tbat4 | cell %d = %f\n\r", i, bmsh.get_cell(i+Battery::CELLS*2), i, bmsh.get_cell(i+Battery::CELLS*3));
-	  }
+	Time::register_low_precision_alarm(20, [&](){
 	  bmsh.start_adc_conversion_all_cells();
 	});
 
-	while (1) {}
+	HAL_Delay(3);
 
+	Time::register_low_precision_alarm(5, [&](){
+	  bmsh.read_cell_voltages();
+	});
+
+	Time::register_low_precision_alarm(100, [&]() {
+		printf("\n\n\n\r");
+
+		for (uint8_t i : iota(0, Battery::CELLS)) {
+			printf("bat 1 | cell %d = %fV\t\t\tbat2 | cell %d = %f\n\r", i, bmsh.get_cell(i), i, bmsh.get_cell(i+Battery::CELLS));
+		}
+
+		for (uint8_t i : iota(0, Battery::CELLS)) {
+			printf("bat 3 | cell %d = %fV\t\t\tbat4 | cell %d = %f\n\r", i, bmsh.get_cell(i+Battery::CELLS*2), i, bmsh.get_cell(i+Battery::CELLS*3));
+		}
+	});
+
+	while (1) {}
 }
+

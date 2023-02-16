@@ -10,7 +10,7 @@ void update_configuration(BMSH& bmsh) {
 
 	  bmsh.update_configuration();
 
-	  array<uint8_t, 8> rx;
+	  array<uint8_t, 16> rx;
 
 	  Time::register_high_precision_alarm(1000, [&](){
 		  bmsh.send_receive_command(BMS::COMMAND::READ_CONFIGURATION_REGISTER_GROUP, rx);
