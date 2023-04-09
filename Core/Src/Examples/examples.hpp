@@ -1,2 +1,5 @@
 #include "read_voltages.hpp"
 #include "update_configuration.hpp"
+#include "read_gpio.hpp"
+#include "update_configuration2.hpp"
+#include "balance_bateries.hpp"

@@ -10,11 +10,14 @@
 int main(void) {
 
 	BMSH bmsh = BMSH(SPI::spi3);
-	STLIB::start(Nucleo);
+	STLIB::start();
 
 	bmsh.wake_up();
 
-	update_configuration(bmsh);
+//	update_configuration2(bmsh);
+//	read_gpio(bmsh);
+//	read_voltages(bmsh);
+	balance_batteries(bmsh);
 
 	while(1){};
 }
